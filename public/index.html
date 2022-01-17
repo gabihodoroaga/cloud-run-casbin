@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign-in with Google - Sample App</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="/main.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="wrapper">
+            <header>
+                <h1>"Sign-in with Google" sample app</h1>
+            </header>
+            <div id="text-static">
+                <div class="user">
+                    <div>
+                        <div id="signin-btn"></div>
+                    </div>
+                    <div>
+                        <div>Email: <span id="user-email"></span></div>
+                        <div>Roles: <span id="user-roles"></span></div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="button-16" role="button" onclick="callAPI('users', 'GET')">GET users</button>
+                    <button class="button-16" role="button" onclick="callAPI('ping', 'GET')">GET ping</button>
+                    <button class="button-16" role="button" onclick="callAPI('ping', 'POST')">POST ping</button>
+                    <button class="button-16" role="button" onclick="callAPI('ping/123', 'PUT')">PUT ping</button>
+                    <button class="button-16" role="button" onclick="callAPI('ping/123', 'DELETE')">DELETE ping</button>
+                </div>
+
+                <div class="add-role">
+                    <div class="form-field">
+                        <label for"email">Email</label>
+                        <input id="email">
+                    </div>
+                    <div class="form-field">
+                        <label for"email">Role (admin, editor, viewer)</label><input id="role">
+                    </div>
+                    <div>
+                    <button class="button-16" role="button"
+                        onclick="callAPI('users/' + document.getElementById('email').value + '/' + document.getElementById('role').value, 'POST')">Add user role</button>
+                    <button class="button-16" role="button"
+                        onclick="callAPI('users/' + document.getElementById('email').value + '/' + document.getElementById('role').value, 'DELETE')">Remove user role</button>
+                    </div>
+                </div>
+            </div>
+            <div id="text-json">
+                <pre id="api-result"></pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

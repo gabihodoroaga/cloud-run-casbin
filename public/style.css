@@ -1,0 +1,133 @@
+#main {
+    /*Styles for sample presentation*/
+    padding: 20px;
+    /*border: 1px solid tomato;*/
+  }
+  
+  #wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    /* The remaining place (horizontaly) will be spread out around divs in wrapper. */
+    justify-content: space-around;
+    
+    /*Styles for sample presentation*/
+    border: 1px solid rgb(70,136,241);;
+  }
+  
+  #wrapper>header {
+    /* To keep header 100% width. */
+    flex: 0 0 100%;
+    text-align: center;
+    
+    /*Styles for sample presentation*/
+    background-color: rgb(70,136,241);
+    color: whitesmoke;
+  }
+  
+  #wrapper>div {
+    margin: 10px;
+    padding: 20px;
+    /* To center the text vertically. */
+    display: flex;
+    flex-flow: column nowrap;
+     
+    /*Styles for sample presentation*/
+    border: 1px solid rgb(70,136,241);
+    text-align: justify;
+  }
+  
+  #text-static {
+    /*Low flex basis values to keep it next to each other divs*/
+    flex: 1 0 30%;
+  }
+  
+  #wrapper>div#text-json {
+    /*Low flex basis values to keep it next to each other divs*/
+    flex: 0 0 25%;
+    margin-left: 0;
+  }
+
+  .user {
+      display: flex;
+      margin: 20px;
+  }
+
+  .user > * {
+    flex: 1;
+  }
+
+  #signin-btn {
+      display: inline-block;
+      height: 40px;
+  }
+
+ 
+  /* CSS */
+  .button-16 {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+  }
+  
+  .button-16:hover {
+    border-color: #dadce0;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+  }
+  
+  .button-16:focus {
+    border-color: #4285f4;
+    outline: none;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px rgb(70,136,241) solid;
+    margin-top: 6px;
+    padding: 6px;
+  }
+
+  .buttons > button {
+      margin: 6px;
+      min-width: 320px;
+  }
+
+  .add-role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px rgb(70,136,241) solid;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 6px;
+  }
+
+  .form-field {
+    display: flex;
+    width: 100%;
+}
+
+  .form-field > * {
+    flex: 1;
+    padding: 6px;
+    margin: 6px;
+  }
+
+  .form-field label {
+      text-align: right;
+  }

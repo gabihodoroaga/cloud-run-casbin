@@ -1,0 +1,19 @@
+# routes for any authenticated user
+p, any, /users/info, GET
+
+# routes for admins only
+p, admin, /users, GET
+p, admin, /users/:userid/:role, POST
+p, admin, /users/:userid/:role, DELETE
+
+# routes for editors only
+p, editor, /ping, POST
+p, editor, /ping/:id, PUT
+p, editor, /ping/:id, DELETE
+
+# routes for viewers
+p, viewer, /ping, GET
+
+# admin is also editor and editor is also a viewer
+g, admin, editor
+g, editor, viewer
